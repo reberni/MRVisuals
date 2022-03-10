@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-
+import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri"
 // components
 
 import Navbar from "components/Navbars/AuthNavbar.js";
@@ -24,18 +24,20 @@ export default function Landing() {
               className="w-full h-full absolute opacity-75 bg-black"
             ></span>
           </div>
-          <div className="container relative mx-auto">
-            <div className="items-center flex flex-wrap">
+          <div className="items-center container relative mx-auto">
+            <div className="flex flex-wrap">
               <div className="w-full lg:w-6/13 px-4 ml-auto mr-auto text-center">
-                <div className="pr-12">
                   <h1 className="text-white font-semibold text-5xl">
                     MR Visuals
                   </h1>
                   <p className="mt-12 text-lg text-blueGray-200">
-                  “THE CAMERA IS AN INSTRUMENT THAT TEACHES PEOPLE HOW TO SEE WITHOUT A CAMERA.”<br/>
-                  – DOROTHEA LANGE
+                    <span className="relative">
+                      <RiDoubleQuotesL className="absolute left-0" />
+                        THE CAMERA IS AN INSTRUMENT THAT TEACHES PEOPLE HOW TO SEE WITHOUT A CAMERA.<br/>
+                      <RiDoubleQuotesR className="absolute right-0"/>
+                    </span>
+                    – DOROTHEA LANGE
                   </p>
-                </div>
               </div>
             </div>
           </div>
@@ -85,7 +87,7 @@ export default function Landing() {
                     </div>
                     <h6 className="text-xl font-semibold">Gear</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                      
+
                     </p>
                   </div>
                 </div>
@@ -99,7 +101,7 @@ export default function Landing() {
                     </div>
                     <h6 className="text-xl font-semibold">Social Media</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                      
+
                     </p>
                   </div>
                 </div>
@@ -119,7 +121,7 @@ export default function Landing() {
                     <a href="https://www.instagram.com/mooosser/" className="font-bold text-blueGray-700 mt-8">
                       Jan Moser
                     </a>
-                  </Link> and 
+                  </Link> and
                   <Link href="/">
                     <a href="https://www.instagram.com/rebernicola/" className="font-bold text-blueGray-700 mt-8">
                       Nicola Reber
