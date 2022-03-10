@@ -18,12 +18,12 @@ export default function Test() {
 
 
     useEffect(() => {
-        getUrls()
-    }, [])
+        if (links) getUrls()
+    }, [links])
 
     const getUrls = async () => {
         let urls = []
-        for (const imgPath of links){
+        for (const imgPath of links) {
             const pathReference = ref(storage, imgPath._location.path_)
             const url = await getDownloadURL(pathReference)
             urls.push(url)
@@ -36,8 +36,8 @@ export default function Test() {
     return (
         <>
             {
-                path.map(url => {
-                    return <img src={url} />
+                path.map((url, i) => {
+                    return <img src={url} key={i} />
                 })
             }
 
