@@ -1,18 +1,46 @@
+
 import { storage } from "firebase/clientAPP"
-import { ref, getDownloadURL } from "firebase/storage"
-import { useState } from "react";
+import { ref, getDownloadURL, listAll } from "firebase/storage"
+import { useEffect, useState } from "react";
 
 export default function Test() {
 
-    const [Link, setLink] = useState("")
-    const pathReference = ref(storage, 'Susten/DSC02172.webp');
-    getDownloadURL(pathReference).then(url => {
-        setLink(url)
-        console.log(url)
-    })
-    return(
+    const [links, setlinks] = useState([])
+    const [path, setPath] = useState([])
+    const testReference = ref(storage, "Susten")
+
+    useEffect(() => {
+        listAll(testReference).then(res => {
+            setlinks(res.items)
+            console.log(res.items)
+        })
+    }, [])
+
+
+    useEffect(() => {
+        getUrls()
+    }, [])
+
+    const getUrls = async () => {
+        let urls = []
+        for (const imgPath of links){
+            const pathReference = ref(storage, imgPath._location.path_)
+            const url = await getDownloadURL(pathReference)
+            urls.push(url)
+        }
+        setPath(urls)
+        console.log(urls)
+    }
+
+
+    return (
         <>
-            <img src={Link}></img>
+            {
+                path.map(url => {
+                    return <img src={url} />
+                })
+            }
+
         </>
     )
 }
