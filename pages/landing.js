@@ -24,18 +24,15 @@ export default function Landing() {
               className="w-full h-full absolute opacity-75 bg-black"
             ></span>
           </div>
-          <div className="items-center container relative mx-auto">
+          <div className="relative mx-auto">
             <div className="flex flex-wrap">
               <div className="w-full lg:w-6/13 px-4 ml-auto mr-auto text-center">
                   <h1 className="text-white font-semibold text-5xl">
                     MR Visuals
                   </h1>
                   <p className="mt-12 text-lg text-blueGray-200">
-                    <span className="relative">
-                      <RiDoubleQuotesL className="absolute left-0" />
-                        THE CAMERA IS AN INSTRUMENT THAT TEACHES PEOPLE HOW TO SEE WITHOUT A CAMERA.<br/>
-                      <RiDoubleQuotesR className="absolute right-0"/>
-                    </span>
+
+                        "THE CAMERA IS AN INSTRUMENT THAT TEACHES PEOPLE HOW TO SEE WITHOUT A CAMERA."<br/>
                     – DOROTHEA LANGE
                   </p>
               </div>
