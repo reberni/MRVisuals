@@ -17,9 +17,10 @@ export default function Test() {
     }
     
     return (
+        <>
         <div className="flex justify-center items-center h-screen">
         <div className="mb-3 w-96">
-          <label htmlFor="formFileSm" className="form-label inline-block mb-2 text-gray-700">Select your file</label>
+          <label htmlFor="formFileSm" className="form-label inline-block mb-2 text-gray-700 font-bold">Please, Select your file</label>
           <input className="form-control
           block
           w-full
@@ -35,8 +36,9 @@ export default function Test() {
           ease-in-out
           m-0
           focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="formFileSm" type="file" onChange={(e) => {setImage(e.target.files[0])}}/>
-          <button onClick={upload}>Upload</button>
+            <button className='bg-black text-white font-bold py-2 px-4 rounded mt-2 hover:bg-blue-500' onClick={upload}>Upload</button>
         </div>
       </div>
+    </>
     )
 }
