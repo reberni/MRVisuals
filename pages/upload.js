@@ -11,7 +11,7 @@ export default function Test() {
         handleSubmit,
         formState: { errors },
       } = useForm();
-    const [image, setImage] = useState("hallo")
+    const [image, setImage] = useState("")
     
 
     const onSubmit = (data) => {
