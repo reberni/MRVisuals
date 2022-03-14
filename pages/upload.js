@@ -1,4 +1,5 @@
-import { storage } from "firebase/clientAPP"
+import { storage, db } from "firebase/clientAPP"
+import { doc, setDoc } from "firebase/firestore"
 import { ref, uploadBytes } from "firebase/storage"
 import { useState } from "react"
 import { useForm } from "react-hook-form";
@@ -17,14 +18,21 @@ export default function Test() {
     const onSubmit = (data) => {
         console.log(data.path)
         const path = data.path
-        const newdata = path.toString()
+        const newdata = path.toString().toLowerCase()
         if (image == null) {
             return
         }
         else {
-            const reference = ref(storage, `/${newdata.toLowerCase()}/${image.name}`)
+            linkDB(newdata)
+            const reference = ref(storage, `/${newdata}/${image.name}`)
             uploadBytes(reference, image)
         }
+    }
+
+    const linkDB = async (name) => {
+        await setDoc(doc(db, "Folders", name), {
+            FolderName: name
+        })
     }
 
     return (
