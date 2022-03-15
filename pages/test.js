@@ -4,26 +4,24 @@ import { db } from "firebase/clientAPP";
 import { useState } from "react";
 import { useEffect } from "react";
 
-
-
 export default function Test() {
 
     const [folder, setFolder] = useState([])
 
     const getData = async () => {
         const querySnapshot = await getDocs(collection(db, "Folders"))
+
+        let folders = []
         querySnapshot.forEach((doc) => {
             const folderName = doc.data().FolderName
-            setFolder([...folder, folderName])
+            folders.push(folderName)
         })
+        setFolder(folders)
     }
 
     useEffect(() => {
         getData()
     }, [])
-
-
-
 
     return (
         <>
