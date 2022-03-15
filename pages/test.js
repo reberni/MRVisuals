@@ -27,9 +27,7 @@ export default function Test() {
         <>
             {
                 folder.map((no, i) => {
-                    console.log(no)
-                    return <Iterate folder={no.toString()} key={i} />
-
+                    return <Iterate folder={no.toString()} key={i} preview={false} />
                 })
             }
         </>

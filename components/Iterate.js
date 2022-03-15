@@ -3,9 +3,9 @@ import { storage } from "firebase/clientAPP"
 import { ref, getDownloadURL, listAll } from "firebase/storage"
 import { useEffect, useState } from "react";
 
-export default function Iterate( { folder } ) {
+export default function Iterate( { folder, preview } ) {
 
-    console.log("iterate --> ", folder)
+    
 
     const [links, setlinks] = useState([])
     const [path, setPath] = useState([])
@@ -13,13 +13,12 @@ export default function Iterate( { folder } ) {
     useEffect(() => {
         listAll(testReference).then(res => {
             setlinks(res.items)
-            console.log("Set links -->", links)
         })
     }, [])
 
 
     useEffect(() => {
-        if (links) getUrls(), console.log("geting URLS...")
+        if (links) getUrls()
     }, [links])
 
     const getUrls = async () => {
@@ -37,9 +36,7 @@ export default function Iterate( { folder } ) {
     return (
         <>
             {
-                path.map((url, i) => {
-                    return <img src={url} key={i} />
-                })
+                preview ? <img src={path[0]} /> : path.map((url, i) => {return <img src={url} key={i}/>})
             }
         </>
     )
