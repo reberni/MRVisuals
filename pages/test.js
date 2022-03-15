@@ -15,7 +15,6 @@ export default function Test() {
         querySnapshot.forEach((doc) => {
             const folderName = doc.data().FolderName
             setFolder([...folder, folderName])
-            console.log(folderName)
         })
     }
 
@@ -26,12 +25,13 @@ export default function Test() {
 
 
 
-    const hallo = "test"
     return (
         <>
             {
                 folder.map((no, i) => {
-                    return <Iterate folder={folder[i]} />
+                    console.log(no)
+                    return <Iterate folder={no.toString()} key={i} />
+
                 })
             }
         </>

@@ -5,20 +5,21 @@ import { useEffect, useState } from "react";
 
 export default function Iterate( { folder } ) {
 
+    console.log("iterate --> ", folder)
+
     const [links, setlinks] = useState([])
     const [path, setPath] = useState([])
     const testReference = ref(storage, folder)
-
     useEffect(() => {
         listAll(testReference).then(res => {
             setlinks(res.items)
-            console.log(res.items)
+            console.log("Set links -->", links)
         })
     }, [])
 
 
     useEffect(() => {
-        if (links) getUrls()
+        if (links) getUrls(), console.log("geting URLS...")
     }, [links])
 
     const getUrls = async () => {
@@ -29,7 +30,7 @@ export default function Iterate( { folder } ) {
             urls.push(url)
         }
         setPath(urls)
-        console.log(urls)
+        
     }
 
 
