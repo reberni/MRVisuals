@@ -2,6 +2,7 @@
 import { storage } from "firebase/clientAPP"
 import { ref, getDownloadURL, listAll } from "firebase/storage"
 import { useEffect, useState } from "react";
+import Link from "next/link"
 
 export default function Iterate( { folder, preview } ) {
 
@@ -33,10 +34,11 @@ export default function Iterate( { folder, preview } ) {
     }
 
 
+
     return (
         <>
             {
-                preview ? <img src={path[0]} /> : path.map((url, i) => {return <img src={url} key={i}/>})
+                preview ? <Link href={`folders/${folder}`}><img src={path[0]} /></Link>: path.map((url, i) => {return <img src={url} key={i}/>})
             }
         </>
     )
