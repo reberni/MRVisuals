@@ -38,7 +38,7 @@ export default function Iterate( { folder, preview } ) {
     return (
         <>
             {
-                preview ? <Link href={`folders/${folder}`}><img src={path[0]} /></Link>: path.map((url, i) => {return <img src={url} key={i}/>})
+                preview ? <Link href={`folders/${folder}`}><img src={path[0]} className="cursor-pointer" /></Link>: path.map((url, i) => {return <img src={url} key={i} className="cursor-pointer"/>})
             }
         </>
     )
