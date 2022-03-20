@@ -4,9 +4,9 @@ import { ref, getDownloadURL, listAll } from "firebase/storage"
 import { useEffect, useState } from "react";
 import Link from "next/link"
 
-export default function Iterate( { folder, preview } ) {
+export default function Iterate({ folder, preview }) {
 
-    
+
 
     const [links, setlinks] = useState([])
     const [path, setPath] = useState([])
@@ -30,7 +30,7 @@ export default function Iterate( { folder, preview } ) {
             urls.push(url)
         }
         setPath(urls)
-        
+
     }
 
 
@@ -38,7 +38,23 @@ export default function Iterate( { folder, preview } ) {
     return (
         <>
             {
-                preview ? <Link href={`folders/${folder}`}><img src={path[0]} className="cursor-pointer" /></Link>: path.map((url, i) => {return <img src={url} key={i} className="cursor-pointer"/>})
+                preview ?
+                    <Link href={`folders/${folder}`}>
+                        <img src={path[0]} className="cursor-pointer rounded w-24" />
+                    </Link > :
+                    <div className="grid grid-cols-3">{
+
+                        path.map((url, i) => {
+                            return (
+                                <div className="col-span-1">
+                                    <div className="overflow-hidden h-60 rounded-lg">
+                                        <img src={url} key={i} className="cursor-pointer rounded-lg object-cover w-full" />
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+                    </div>
             }
         </>
     )
