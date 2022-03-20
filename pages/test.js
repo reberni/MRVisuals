@@ -4,6 +4,8 @@ import { db } from "firebase/clientAPP";
 import { useState } from "react";
 import { useEffect } from "react";
 
+import View from "components/view"
+
 export default function Test() {
 
     const [folder, setFolder] = useState([])
@@ -24,15 +26,15 @@ export default function Test() {
     }, [])
 
     return (
-        <div className="text-center">
-            <h1 className="text-2xl font-bold mt-3 mb-8">Gallery</h1>
-            <div className="flex">
-                {
-                    folder.map((no, i) => {
-                        return <Iterate folder={no.toString()} key={i} preview={true} />
-                    })
-                }
-            </div>
-        </div>
+        <>
+            <View text="Gallery" />
+                <div className="flex">
+                    {
+                        folder.map((no, i) => {
+                            return <Iterate folder={no.toString()} key={i} preview={true} />
+                        })
+                    }
+                </div>
+        </>
     )
 }
