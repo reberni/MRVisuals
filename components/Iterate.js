@@ -40,13 +40,13 @@ export default function Iterate({ folder, preview }) {
             {
                 preview ?
                     <Link href={`folders/${folder}`}>
-                        <img src={path[0]} className="cursor-pointer rounded w-24" />
+                        <img src={path[0]} className="cursor-pointer rounded-lg object-cover w-full h-60 mr-3 ml-3 mt-3" />
                     </Link > :
                     <div className="grid grid-cols-3">{
 
                         path.map((url, i) => {
                             return (
-                                <div className="col-span-1">
+                                <div className="col-span-1 mr-3 ml-3 mt-3">
                                     <div className="overflow-hidden h-60 rounded-lg">
                                         <img src={url} key={i} className="cursor-pointer rounded-lg object-cover w-full" />
                                     </div>

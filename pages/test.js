@@ -24,12 +24,15 @@ export default function Test() {
     }, [])
 
     return (
-        <div className="flex">
-            {
-                folder.map((no, i) => {
-                    return <Iterate folder={no.toString()} key={i} preview={true} />
-                })
-            }
+        <div className="text-center">
+            <h1 className="text-2xl font-bold mt-3 mb-8">Gallery</h1>
+            <div className="flex">
+                {
+                    folder.map((no, i) => {
+                        return <Iterate folder={no.toString()} key={i} preview={true} />
+                    })
+                }
+            </div>
         </div>
     )
 }
