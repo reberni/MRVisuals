@@ -15,7 +15,7 @@ export default function Folders({ name, onClick }) {
         {
             !loading && 
             value.map((folder, i) => {
-                return(<Folder name={folder.FolderName} key={i} onClick={onClick}/>)
+                return(<Folder name={folder.FolderName} key={i} onClick={onClick} id={folder.FolderName}/>)
             })
         }
         </div>
