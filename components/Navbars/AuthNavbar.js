@@ -1,5 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import { BsInstagram } from "react-icons/bs"
+import { FiYoutube } from "react-icons/fi"
+
 // components
 
 import PagesDropdown from "components/Dropdowns/PagesDropdown.js";
@@ -35,16 +38,15 @@ export default function Navbar(props) {
             id="example-navbar-warning"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="flex items-center">
-                <PagesDropdown />
-              </li>
+              <a className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="/login">Login</a>
               <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://www.instagram.com/"
                   target="_blank"
-                >
-                  <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-instagram text-lg leading-lg " />
+                > <BsInstagram className="lg:text-blueGray-200 text-blueGray-400 fab fa-instagram text-lg leading-lg " />
+                  
                   <span className="lg:hidden inline-block ml-2">Instagram</span>
                 </a>
               </li>
@@ -55,7 +57,7 @@ export default function Navbar(props) {
                   href="https://www.youtube.com/channel/UCBkcQls3GeHlXSXZU75W_fA"
                   target="_blank"
                 >
-                  <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-youtube text-lg leading-lg " />
+                  <FiYoutube className="lg:text-blueGray-200 text-blueGray-400 fab fa-instagram text-lg leading-lg " />
                   <span className="lg:hidden inline-block ml-2">YouTube</span>
                 </a>
               </li>
