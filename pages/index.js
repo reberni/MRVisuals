@@ -52,7 +52,9 @@ export default function Landing() {
         <section className="pb-20 bg-blueGray-200 mt-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
+              
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+              <a href="/test">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
@@ -64,9 +66,11 @@ export default function Landing() {
                     </p>
                   </div>
                 </div>
+                </a>
               </div>
-
+              
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+              <a href="/gear">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
@@ -78,9 +82,11 @@ export default function Landing() {
                     </p>
                   </div>
                 </div>
+              </a>
               </div>
 
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+              <a href="/social">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
@@ -88,11 +94,12 @@ export default function Landing() {
                     </div>
                     <h6 className="text-xl font-semibold">Social Media</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-
                     </p>
                   </div>
                 </div>
+                </a>
               </div>
+              
             </div>
 
             <div className="flex flex-wrap items-center mt-32">
