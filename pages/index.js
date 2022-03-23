@@ -3,11 +3,12 @@ import Link from "next/link";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri"
 import { AiFillCamera } from "react-icons/ai"
 import { FaHammer, FaUserAlt } from "react-icons/fa"
+import { BsChatFill } from "react-icons/bs"
+
 
 // components
 
 import Navbar from "components/Navbars/AuthNavbar.js";
-import Footer from "components/Footers/Footer.js";
 
 
 export default function Landing() {
@@ -55,10 +56,10 @@ export default function Landing() {
               
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
               <a href="/test">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div className="relative flex flex-col min-w-0 break-words bg-gray-100 w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
-                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
-                    <FaHammer className="text-black text-2xl" />
+                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
+                    <FaHammer className="text-white text-3xl" />
                     </div>
                     <h6 className="text-xl font-semibold">Work</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
@@ -71,10 +72,10 @@ export default function Landing() {
               
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
               <a href="/gear">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div className="relative flex flex-col min-w-0 break-words bg-gray-100 w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
-                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
-                    <AiFillCamera className="text-black text-2xl" />
+                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
+                    <AiFillCamera className="text-white text-2xl" />
                     </div>
                     <h6 className="text-xl font-semibold">Gear</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
@@ -87,10 +88,10 @@ export default function Landing() {
 
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
               <a href="/social">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div className="relative flex flex-col min-w-0 break-words bg-gray-100 w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
-                    <FaUserAlt className="text-black text-2xl" />
+                    <FaUserAlt className="text-white text-3xl" />
                     </div>
                     <h6 className="text-xl font-semibold">Social Media</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
@@ -104,8 +105,8 @@ export default function Landing() {
 
             <div className="flex flex-wrap items-center mt-32">
               <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-                <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                  <i className="fas fa-user-friends text-xl"></i>
+                <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-emerald-400">
+                <BsChatFill className="text-white text-3xl" />
                 </div>
                 <h3 className="text-3xl mb-2 font-semibold leading-normal">
                   About us
