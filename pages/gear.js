@@ -36,90 +36,35 @@ export default function Landing() {
                     <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
                         <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-emerald-400">
                             <BsChatFill className="text-white text-3xl" />
-                            <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                            Social Mediaa
-                        </h3>
+
                         </div>
-                        
+                        <h3 className="text-3xl mb-2 font-semibold leading-normal">
+                            About Us
+                        </h3>
 
                     </div>
-
-
-
                 </div>
-                <div className="w-full md:w-6/12 px-4 mr-auto ml-auto">
-                    <section className="pb-20 bg-blueGray-200 mt-24">
-                        <div className="container mx-auto px-4">
-                            <div className="flex flex-wrap">
 
-                                <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-                                    <a href="/test">
-                                        <div className="relative flex flex-col min-w-0 break-words bg-gray-100 w-full mb-8 shadow-lg rounded-lg">
-                                            <div className="px-4 py-5 flex-auto">
-                                                <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
-                                                    <FaHammer className="text-white text-3xl" />
-                                                </div>
-                                                <h6 className="text-xl font-semibold">Instagram</h6>
-                                                <p className="mt-2 mb-4 text-blueGray-500">
-
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-                                    <a href="/gear">
-                                        <div className="relative flex flex-col min-w-0 break-words bg-gray-100 w-full mb-8 shadow-lg rounded-lg">
-                                            <div className="px-4 py-5 flex-auto">
-                                                <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
-                                                    <AiFillCamera className="text-white text-2xl" />
-                                                </div>
-                                                <h6 className="text-xl font-semibold">YouTube</h6>
-                                                <p className="mt-2 mb-4 text-blueGray-500">
-
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-                                    <a href="/gear">
-                                        <div className="relative flex flex-col min-w-0 break-words bg-gray-100 w-full mb-8 shadow-lg rounded-lg">
-                                            <div className="px-4 py-5 flex-auto">
-                                                <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
-                                                    <AiFillCamera className="text-white text-2xl" />
-                                                </div>
-                                                <h6 className="text-xl font-semibold">YouTube</h6>
-                                                <p className="mt-2 mb-4 text-blueGray-500">
-
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-                                    <a href="/gear">
-                                        <div className="relative flex flex-col min-w-0 break-words bg-gray-100 w-full mb-8 shadow-lg rounded-lg">
-                                            <div className="px-4 py-5 flex-auto">
-                                                <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
-                                                    <AiFillCamera className="text-white text-2xl" />
-                                                </div>
-                                                <h6 className="text-xl font-semibold">YouTube</h6>
-                                                <p className="mt-2 mb-4 text-blueGray-500">
-
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
+                <div class="text-center">
+                    <img
+                        src="https://firebasestorage.googleapis.com/v0/b/mrvisuals-web.appspot.com/o/website%2FPBNicola.jpg?alt=media&token=4322dd99-e3d1-4b00-91cb-637b219d93ed"
+                        class="rounded-full w-32 h-32 mb-4 mx-auto"
+                        alt="Avatar"
+                    />
+                    <h5 class="text-xl font-medium leading-tight mb-2">Nicola Reber</h5>
+                    <p class="text-gray-500">Computer Scientist | Photographer </p>
                 </div>
+                
+                <div class="text-center">
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp"
+                  class="rounded-full w-32 mb-4 mx-auto"
+                  alt="Avatar"
+                />
+                <h5 class="text-xl font-medium leading-tight mb-2">John Doe</h5>
+                <p class="text-gray-500">Web designer</p>
+              </div>
+
             </main>
 
         </>
