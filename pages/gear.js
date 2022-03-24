@@ -36,10 +36,11 @@ export default function Landing() {
                     <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
                         <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-emerald-400">
                             <BsChatFill className="text-white text-3xl" />
-                        </div>
-                        <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                            Social Media
+                            <h3 className="text-3xl mb-2 font-semibold leading-normal">
+                            Social Mediaa
                         </h3>
+                        </div>
+                        
 
                     </div>
 

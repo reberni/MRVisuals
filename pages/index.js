@@ -116,7 +116,7 @@ export default function Landing() {
                     <a href="https://www.instagram.com/mooosser/" className="font-bold text-blueGray-700 mt-8">
                       Jan Moser
                     </a>
-                  </Link> and
+                  </Link> and&nbsp;
                   <Link href="/">
                     <a href="https://www.instagram.com/rebernicola/" className="font-bold text-blueGray-700 mt-8">
                       Nicola Reber
